@@ -38,10 +38,16 @@
 	border: none;
 }
 
-.label:hover,
-.item[data-checked='true'] .label:hover {
+
+.item:not([data-checked='true']) .label:hover {
+	background: var(--gold, #FFEDAB);
+}
+
+.label:active,
+.item[data-checked='true'] .label:active {
 	background: var(--gold, #ffc802);
 }
+
 
 .item[data-checked='true'] .label {
 	background: var(--gold, #ffc802);
@@ -51,4 +57,6 @@
 	display: flex;
 	flex-direction: column;
 	row-gap: 4px;
+	margin-top: 50px;
 }
+
