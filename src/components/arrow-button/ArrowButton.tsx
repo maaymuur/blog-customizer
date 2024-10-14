@@ -1,4 +1,4 @@
-// ArrowButton.tsx
+/* eslint-disable react/react-in-jsx-scope */
 import arrow from 'src/images/arrow.svg';
 import styles from './ArrowButton.module.scss';
 

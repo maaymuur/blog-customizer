@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { useState, useEffect } from 'react';
 import { Button } from 'components/button';
 import { Select } from '../select';
@@ -29,7 +30,8 @@ export const ArticleParamsForm = ({ isOpen, settings, onApply, onReset }: Articl
     setWidthArrSize(settings.contentWidth);
   }, [settings]);
 
-  const handleApply = () => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     onApply({
       fontFamilyOption: selectedFont || settings.fontFamilyOption,
       fontSizeOption: selectedFontSize,
@@ -45,7 +47,7 @@ export const ArticleParamsForm = ({ isOpen, settings, onApply, onReset }: Articl
 
   return (
     <aside className={`${styles.container} ${isOpen ? styles.container_open : ''}`}>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.title}>
           <Text family="open-sans" weight={800} size={25}>
             Задайте параметры
@@ -100,8 +102,8 @@ export const ArticleParamsForm = ({ isOpen, settings, onApply, onReset }: Articl
           />
         </div>
         <div className={styles.bottomContainer}>
-          <Button title='Сбросить' type='button' onClick={handleReset} />
-          <Button title='Применить' type='button' onClick={handleApply} />
+          <Button title='Сбросить' type='reset' onClick={handleReset} />
+          <Button title='Применить' type='submit' />
         </div>
       </form>
     </aside>
