@@ -6,7 +6,9 @@
 	display: flex;
 	flex-direction: column;
 	row-gap: 4px;
+	margin-top: 50px;
 }
+
 
 .arrow {
 	position: absolute;
@@ -29,23 +31,24 @@
 	cursor: pointer;
 }
 
+
 .placeholder[data-selected='true'] {
 	color: rgb(0 0 0);
 }
 
-.selectWrapper[data-is-active='true'] .arrow {
-	margin-top: -14px;
-	transform: rotate(180deg);
+.selectWrapper {
+	position: relative;
+	outline: 1px solid transparent; 
 }
 
-.selectWrapper[data-is-active='true'] .placeholder {
-	outline: 3px solid #000000;
+.selectWrapper[data-is-active='true'] {
+	outline: 3px solid  #000000; 
 }
 
-.selectWrapper:not([data-is-active='true'])
-	.placeholder:not([data-status='invalid']):hover {
-	outline: 3px solid #000000;
+.selectWrapper:not([data-is-active='true']):hover {
+	outline-color: #ffc802; 
 }
+
 
 .select {
 	position: absolute;
@@ -60,6 +63,7 @@
 	border-top: none;
 	outline: 3px solid #000000;
 }
+
 
 .option {
 	display: flex;
@@ -78,7 +82,11 @@
 }
 
 .option:hover {
-	background: var(--grey, #c4c4c4);
+	background: var(--grey, #EEEEEE);
+}
+
+.option:active {
+	background: var(--grey, #D7D7D7);
 }
 
 @mixin option-color-before {

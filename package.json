@@ -4,6 +4,7 @@
 	"main": "index.js",
 	"license": "MIT",
 	"devDependencies": {
+		"@eslint/js": "^9.10.0",
 		"@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
 		"@storybook/addon-essentials": "^7.6.10",
 		"@storybook/addon-interactions": "^7.6.10",
@@ -26,19 +27,21 @@
 		"css-loader": "^6.8.1",
 		"cssnano": "^6.0.1",
 		"cz-conventional-changelog": "^3.3.0",
-		"eslint": "^8.42.0",
+		"eslint": "^8.57.1",
 		"eslint-config-prettier": "^8.8.0",
 		"eslint-import-resolver-typescript": "^3.6.1",
 		"eslint-plugin-eslint-comments": "^3.2.0",
 		"eslint-plugin-import": "^2.27.5",
 		"eslint-plugin-prettier": "^4.2.1",
-		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react": "^7.36.1",
 		"eslint-plugin-react-hooks": "^4.6.0",
+		"globals": "^15.9.0",
 		"html-webpack-plugin": "^5.5.1",
 		"husky": "^8.0.3",
 		"lint-staged": "^13.2.2",
 		"merge": "^2.1.1",
 		"mini-css-extract-plugin": "^2.7.6",
+		"parcel-bundler": "^1.12.5",
 		"postcss-loader": "^7.3.3",
 		"prettier": "^2.8.8",
 		"react-refresh": "^0.14.0",
@@ -52,6 +55,7 @@
 		"stylelint-order": "^6.0.3",
 		"ts-loader": "^9.4.3",
 		"typescript": "^5.0.4",
+		"typescript-eslint": "^8.6.0",
 		"typescript-plugin-css-modules": "^5.0.1",
 		"url-loader": "^4.1.1",
 		"webpack": "^5.81.0",
@@ -61,6 +65,7 @@
 	"scripts": {
 		"build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.js --env env=prod",
 		"start": "webpack serve --config webpack/webpack.config.js --env env=dev",
+		"dev": "npm run start",
 		"stylelint": "stylelint \"src/**/*.scss\"",
 		"stylelint:fix": "stylelint \"src/**/*.scss\" --fix",
 		"lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
@@ -78,8 +83,8 @@
 	},
 	"dependencies": {
 		"clsx": "^2.1.0",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1"
 	},
 	"lint-staged": {
 		"*.{css,scss}": "yarn stylelint:fix",
@@ -91,5 +96,8 @@
 			"path": "./node_modules/cz-conventional-changelog"
 		}
 	},
-	"homepage": "./"
+	"homepage": "http://./",
+	"description": "## Шаг первый. Изучаем имеющиеся компоненты",
+	"keywords": [],
+	"author": ""
 }
