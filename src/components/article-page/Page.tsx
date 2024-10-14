@@ -6,7 +6,7 @@ import { ArticleParamsForm } from 'components/article-params-form';
 import { OptionType, defaultArticleState } from 'src/constants/articleProps';
 
 export const Page = ({ onSettingsChange }: { onSettingsChange: (settings: typeof defaultArticleState) => void }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Переименовали переменные
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [formSettings, setFormSettings] = useState(defaultArticleState);
   const formRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLDivElement>(null);
